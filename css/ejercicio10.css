@@ -1,0 +1,121 @@
+/*
+Variables css (custom properties)
+Proposito: Centralizar colores fuentes y tamaños para facil mantenimiento
+Beneficios: Cambios globales desde un solo lugar-*/
+
+:root{
+    --color-primario: #057d47;
+    --color-secundario: #266477;
+    --color-fondo: #f8f9fa;
+    --color-texto: #192391;
+    --color-borde: #e9ecef;
+}
+
+/*
+Recet basico
+Proposito: Eliminar margenes y paddings predeterminados del navegador.
+Beneficios: Evita inconsitencias entre navegadores-*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*estilos generales
+tipografia y fondo*/
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/*contenedor principal
+*/
+
+.contenedor{
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* estilos tipograficos*/
+
+h1{
+    font-size: 28px;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitulo{
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/*grupos de formularios*/
+
+.grupo-formulario{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/*inputs y textarea*/
+
+input{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+input:focus{
+    border-color: var(--color-secundario);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
+}
+
+/*columnas */
+.entrada{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.salida{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/*bton de envio*/
+#btnConvertir{
+    background-color: var(--color-secundario);
+    color: white;
+    margin: 0 auto;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnConvertir:hover{
+    background-color: #2a0880;
+}

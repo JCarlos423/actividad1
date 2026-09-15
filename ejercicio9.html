@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Contacto | DevsSolutions</title>
+    <!--referencia a estilos en doc externo-->
+    <link rel="stylesheet" href="css\ejercicioo9.css">
+    <link href="https://fonts.googleapis.com/css?family=Interzwght@400;500,600&display-swap" rel=" stylesheet">
+</head>
+<body>
+    <div class="contenedorformulario">
+        <h1>Contáctanos</h1>
+        <p class="subtitulo">¿Tienes dudad? Escribenos y te responderemos en 24h.</p>
+
+        <form class="formularios">
+            <!--Datos basicos (grupo1)-->
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Ej: Ana Pérez" required>
+            </div>
+            
+            <!--Email y telefono (grupo2)-->
+            <div class="grupo-doble">
+                <div class="grupo-formulario">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="ana@ejemplo.com" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono" placeholder="+52 55 1246 5678" required>
+                </div>
+            </div>
+
+            <!--Grupo 3 Mensaje-->
+            <div class="grupo-formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea rows="5" id="mensaje" placeholder="Describe tu consulta..." required></textarea>
+            </div>
+
+            <button type="submit" class="boton-enviar">
+                Enviar Mensaje <span>→</span>
+            </button>
+        </form>
+</body>
+</html>

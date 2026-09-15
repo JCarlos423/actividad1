@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor Celsius a Fahrenheit</title>
+    <link rel="stylesheet" href="css\ejercicio10.css">
+    <script src="js/ejercicio10.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Conversor Celsius a Fahrenheit</h1>
+
+         <form class="lectura">
+            <div class="entrada">
+                <label for="ccc">Grados Celsius</label>
+                <input type="number" id="ccc" placeholder="100" required>
+            </div><br>
+            <div class="salida">
+                <label for="fff">Grados Fahrenheit:</label>
+                <input type="text" id="fff" readonly>
+            </div>
+         </form>
+         <br>
+         <button type="button" id="btnConvertir" onclick="convertir()">Convertir</button>
+    </div>
+</body>
+</html>
