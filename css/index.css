@@ -61,7 +61,7 @@ h1{
     text-align: center;
 }
 
-#nombre{
+.nombre{
     font-size: 12px;
     color: var(--color-secundario);
     margin-bottom: 8px;
