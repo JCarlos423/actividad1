@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12 Divisas</title>
+    <link rel="stylesheet" href="css\ejercicio12.css">
+    <script src="js/ejercicio12.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Conversor de divisas (peso mxn a dolar)</h1>
+
+         <form class="lectura">
+            <div class="entrada">
+                <label for="mxn">Pesos mexicanos:</label>
+                <textarea type="number" id="mxn" placeholder="100" required></textarea>
+            </div><br>
+            <div class="salida">
+                <label for="dlr">Dolar:</label>
+                <textarea type="text" id="dlr" readonly></textarea>
+            </div>
+         </form>
+         <br>
+         <button type="button" id="btnConvertir" onclick="convertir()">Convertir</button>
+    </div>
+</body>
+</html
