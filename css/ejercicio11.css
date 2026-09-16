@@ -4,10 +4,10 @@ Proposito: Centralizar colores fuentes y tamaños para facil mantenimiento
 Beneficios: Cambios globales desde un solo lugar-*/
 
 :root{
-    --color-primario: #057d47;
-    --color-secundario: #266477;
-    --color-fondo: #f8f9fa;
-    --color-texto: #192391;
+    --color-primario: #c1730e;
+    --color-secundario: #f4b60c;
+    --color-fondo: #ffffff;
+    --color-texto: #c66307;
     --color-borde: #e9ecef;
 }
 
@@ -39,7 +39,7 @@ body{
 .contenedor{
     max-width: 600px;
     margin: 0 auto;
-    background: white;
+    background: rgba(245, 229, 194, 0.938);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -109,7 +109,7 @@ textarea:focus{
 
 /*bton de envio*/
 #btnConvertir{
-    background-color: var(--color-secundario);
+    background-color: var(--color-primario);
     color: white;
     margin: 0 auto;
     border: none;
@@ -124,5 +124,5 @@ textarea:focus{
 }
 
 #btnConvertir:hover{
-    background-color: #2a0880;
+    background-color: var(--color-secundario);
 }

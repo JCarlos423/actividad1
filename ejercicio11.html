@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Kilometros a Millas</title>
+    <link rel="stylesheet" href="css\ejercicio11.css">
+    <script src="js/ejercicio11.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Conversor de KM a Millas</h1>
+
+         <form class="lectura">
+            <div class="entrada">
+                <label for="km">Kilometros:</label>
+                <textarea type="number" id="km" placeholder="100" required></textarea>
+            </div><br>
+            <div class="salida">
+                <label for="mill">Millas:</label>
+                <textarea type="text" id="mill" readonly></textarea>
+            </div>
+         </form>
+         <br>
+         <button type="button" id="btnConvertir" onclick="convertir()">Convertir</button>
+    </div>
+</body>
+</html>
