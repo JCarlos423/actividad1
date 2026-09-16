@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 EDAD</title>
+    <link rel="stylesheet" href="css\ejercicio13.css">
+    <script src="js/ejercicio13.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>¿Puedo votar?</h1>
+
+         <form class="lectura">
+            <div class="entrada">
+                <label for="edad">Ingresa tu edad:</label>
+                <textarea type="number" id="edad" placeholder="18" required></textarea>
+            </div><br>
+            <div class="salida">
+                <textarea type="text" id="res" readonly></textarea>
+            </div>
+         </form>
+         <br>
+         <button type="button" id="btnValidar" onclick="validar()">Validar</button>
+    </div>
+</body>
+</html

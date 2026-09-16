@@ -54,14 +54,13 @@ h1{
     text-align: center;
 }
 
-#materia{
+h2{
     font-size: 15px;
     color: var(--color-secundario);
     margin-bottom: 8px;
     text-align: center;
 }
-
-.nombre{
+h3{
     font-size: 12px;
     color: var(--color-secundario);
     margin-bottom: 8px;
