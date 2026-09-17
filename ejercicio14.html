@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Arreglos</title>
+    <link rel="stylesheet" href="css/ejercicio14.css"></link>
+    <script src="js/ejercicio14.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Arreglos y metodos</h1>
+        <form class="formulario">
+            <div class="lectura">
+                <label for="num">Ingresa los numeros separados por una coma (,)</label>
+                <textarea type="text" id="entrada" placeholder="1,2,3..." required></textarea>
+            </div><br>
+            <div class="salida">
+                <label>Numero mayor</label>
+                <label>Numero menor</label>
+                <label>Promedio</label>
+                <textarea type="text" id="mayor" readonly></textarea>
+                <textarea type="text" id="menor" readonly></textarea>
+                <textarea type="text" id="promedio" readonly></textarea>
+            </div>
+        </form>
+        <br>
+        <button type="button" id="btnValidar" onclick="validar()">Validar</button>
+    </div>
+</body>
+</html>
