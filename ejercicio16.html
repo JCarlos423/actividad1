@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16  - Calculadora basica</title>
+    <link rel="stylesheet" href="css/ejercicio16.css"></link>
+    <script src="js/ejercicio16.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Calculadora basica</h1>
+        <form class="formulario">
+            <div class="lectura">
+                <label for="num1">Ingresa el primer número:</label>
+                <input type="text" id="num1" placeholder="Ej. 10" required>
+                <label for="num2">Ingresa el segundo número:</label>
+                <input type="text" id="num2" placeholder="Ej. 5" required>
+            </div><br>
+            <div id="botonera">
+            <button type="button" class="btnValidar" onclick="suma()">SUMAR</button>
+            <button type="button" class="btnValidar" onclick="resta()">RESTAR</button>
+            <button type="button" class="btnValidar" onclick="mult()">MULTIPLICAR</button>
+            <button type="button" class="btnValidar" onclick="div()">DIVIDIR</button>
+            </div>
+            <br>
+            <div class="salida">
+                <label for="resultado">Resultado</label>
+                <input type="text" id="resultado" readonly placeholder="Esperando operación...">
+            </div>
+        </form>
+        <br>
+    </div>
+</body>
+</html>

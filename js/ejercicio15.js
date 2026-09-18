@@ -21,7 +21,7 @@ function registrar() {
     }
 
     // Creación del objeto estudiante[cite: 1]
-    const estudiante = {
+    let estudiante = {
         nombre: nombre,
         calificacion: calificacion
     };
