@@ -9,30 +9,37 @@
   <script src="js/ejercicio18.js" defer></script>
 </head>
 <body class="bg-light">
+        <main class="container py-4 py-md-5">
+            <section class="app-panel mx-auto p-4 p-md-5 bg-white shadow-sm">
+                <header class="mb-4">
+                    <span class="badge text-bg-primary mb-2">Ejercicio Guiado 18</span>
+                    <h1 class="display-6 fw-bold">Agregar y eliminar elementos</h1>
+                    <p class="text-secondary mb-0">Crea una lista dinámica utilizando manipulación del DOM.</p>
+                </header>
 
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6">
-        
-        <div class="card shadow-sm border-0">
-          <div class="card-body p-4">
-            <h2 class="card-title text-center mb-4 text-primary fw-bold">Lista de Tareas</h2>
-            
-            <!-- Grupo de entrada y botón -->
-            <div class="input-group mb-3">
-              <input type="text" id="nuevoElemento" class="form-control" placeholder="Escribe un elemento...">
-              <button class="btn btn-primary" type="button" id="agregarBtn">Agregar</button>
-            </div>
+                <form id="formulario-elemento" class="row g-2 mb-4">
+                    <div class="col-12 col-md">
+                        <label for="nuevoElemento" class="visually-hidden">Nuevo elemento</label>
+                        <input type="text" id="nuevoElemento" class="form-control form-control-lg" placeholder="Escribe algo para agregar" autocomplete="off" maxlength="120">
+                    </div>
+                    <div class="col-12 col-md-auto">
+                        <button type="submit" id="agregarBtn" class="btn btn-primary btn-lg w-100">Agregar</button>
+                    </div>
+                </form>
 
-            <!-- Contenedor de la lista dinámica -->
-            <ul id="lista" class="list-group"></ul>
-          </div>
-        </div>
+                <div id="mensaje" class="alert alert-warning d-none" role="alert"></div>
 
-      </div>
-    </div>
-  </div>
+                <section aria-labelledby="titulo-lista">
+                    <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
+                        <h2 id="titulo-lista" class="h4 mb-0">Elementos agregados</h2>
+                        <span id="contador" class="badge rounded-pill text-bg-secondary">0 elementos</span>
+                    </div>
+                    <p id="lista-vacia" class="text-secondary text-center border rounded p-4 mb-0">Todavía no hay elementos en la lista.</p>
+                    <ul id="lista" class="list-group"></ul>
+                </section>
 
-  <script src="app.js"></script>
+                <p class="mt-4 mb-0"><a href="index.html" class="link-primary">Volver al índice</a></p>
+            </section>
+        </main>
 </body>
-</html>
+</html>      

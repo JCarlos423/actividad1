@@ -1,48 +1,59 @@
-// Selección de elementos del DOM
-const input = document.getElementById('nuevoElemento');
-const botonAgregar = document.getElementById('agregarBtn');
-const lista = document.getElementById('lista');
+const formulario = document.getElementById('formulario-elemento');
+            const input = document.getElementById('nuevoElemento');
+            const lista = document.getElementById('lista');
+            const listaVacia = document.getElementById('lista-vacia');
+            const contador = document.getElementById('contador');
+            const mensaje = document.getElementById('mensaje');
 
-function agregarElemento() {
-  const texto = input.value.trim();
+            const mostrarMensaje = texto => {
+                mensaje.textContent = texto;
+                mensaje.classList.remove('d-none');
+            };
 
-  if (texto !== '') {
-    // 1. Crear el elemento 'li' con clases de Bootstrap
-    const li = document.createElement('li');
-    li.className = 'list-group-item d-flex justify-content-between align-items-center';
+            const actualizarEstado = () => {
+                const cantidad = lista.children.length;
+                listaVacia.classList.toggle('d-none', cantidad > 0);
+                contador.textContent = `${cantidad} ${cantidad === 1 ? 'elemento' : 'elementos'}`;
+            };
 
-    // 2. Crear un contenedor span para el texto
-    const spanTexto = document.createElement('span');
-    spanTexto.textContent = texto;
-    li.appendChild(spanTexto);
+            const eliminarElemento = elemento => {
+                elemento.remove();
+                actualizarEstado();
+            };
 
-    // 3. Crear el botón de eliminar estilizado con Bootstrap
-    const botonEliminar = document.createElement('button');
-    botonEliminar.textContent = 'Eliminar';
-    botonEliminar.className = 'btn btn-sm btn-outline-danger';
-    
-    // Evento para remover el nodo al presionar eliminar
-    botonEliminar.addEventListener('click', function () {
-      li.remove();
-    });
+            const agregarElemento = () => {
+                const texto = input.value.trim();
 
-    li.appendChild(botonEliminar);
+                if (texto === '') {
+                    mostrarMensaje('Escribe algo para agregar a la lista.');
+                    input.focus();
+                    return;
+                }
 
-    // 4. Agregar a la lista y limpiar el campo
-    lista.appendChild(li);
-    input.value = '';
-    input.focus();
-  } else {
-    alert('Escribe algo antes de agregarlo a la lista.');
-  }
-}
+                const elemento = document.createElement('li');
+                elemento.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'gap-3');
 
-// Evento al hacer clic en el botón
-botonAgregar.addEventListener('click', agregarElemento);
+                const textoNodo = document.createElement('span');
+                textoNodo.textContent = texto;
 
-// Opcional: permitir agregar presionando Enter en el input
-input.addEventListener('keydown', function (e) {
-  if (e.key === 'Enter') {
-    agregarElemento();
-  }
-});
+                const botonEliminar = document.createElement('button');
+                botonEliminar.type = 'button';
+                botonEliminar.classList.add('btn', 'btn-outline-danger', 'btn-sm', 'flex-shrink-0');
+                botonEliminar.textContent = 'Eliminar';
+                botonEliminar.addEventListener('click', () => eliminarElemento(elemento));
+
+                elemento.appendChild(textoNodo);
+                elemento.appendChild(botonEliminar);
+                lista.appendChild(elemento);
+                input.value = '';
+                mensaje.classList.add('d-none');
+                actualizarEstado();
+                input.focus();
+            };
+
+            formulario.addEventListener('submit', event => {
+                event.preventDefault();
+                agregarElemento();
+            });
+
+            actualizarEstado();
