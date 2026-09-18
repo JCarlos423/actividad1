@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/ejercicio17.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+        <script src="js/ejercicio17.js" defer></script>
+        <title>Ejercicio 17 - Gestión de tareas</title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <h1>Gestión de tareas pendientes</h1>
+            <p>Agrega tareas y consérvalas aunque cierres el navegador.</p>
+
+            <form id="formulario-tarea">
+                <h2 for="tarea">Nueva tarea:</h2>
+                <div class="lectura">
+                    <input type="text" id="tarea" name="tarea" autocomplete="off" maxlength="120">
+                    <button type="submit" class="btn">Agregar tarea</button>
+                </div>
+            
+
+            <section aria-labelledby="titulo-lista">
+                <h1>Tareas pendientes</h1>
+                <p id="lista-vacia" class="lista-vacia">No hay tareas pendientes.</p>
+                <ul id="lista-tareas"></ul>
+            </section>
+            </form>
+        </div>
+    </body>
+
+</html>
