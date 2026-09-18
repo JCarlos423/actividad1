@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Arreglos</title>
+    <link rel="stylesheet" href="css/ejercicio15.css"></link>
+    <script src="js/ejercicio15.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Arreglos y metodos</h1>
+        <form class="formulario">
+            <div class="lectura">
+                <label for="nombre">Ingresa el nombre del estudiante:</label>
+                <textarea type="text" id="nombre" placeholder="Juan" required></textarea>
+                <label for="cal">Ingresa el nombre del estudiante:</label>
+                <textarea type="num" id="cal" placeholder="85" required></textarea>
+            </div><br>
+            <button type="button" class="btnValidar" onclick="registrar()">Registrar</button>
+            <br>
+            <div class="salida">
+                <label>Alumno con mayor calificación</label>
+                <textarea type="text" id="mayor" readonly></textarea>
+                <label>Alumno con menor calificación</label>
+                <textarea type="text" id="menor" readonly></textarea>
+                <label>Promedio</label>
+                <textarea type="text" id="promedio" readonly></textarea>
+            </div>
+        </form>
+        <br>
+        <button type="button" class="btnValidar" onclick="validar()">Calcular</button>
+    </div>
+</body>
+</html>
