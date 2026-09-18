@@ -20,6 +20,9 @@
             font-size: 25px;
             text-align: center;
         }
+        h2{
+            text-align: center;
+        }
 
         /*estilos para la tabla*/
         .horario{
